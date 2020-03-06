@@ -5,12 +5,12 @@ import re
 import json
 import shutil
 
+#If you have more than 50 photos on your account think about pushing your app for production otherwise you are limited to 50 api call / hour
 pu = pyunsplash.PyUnsplash(api_key='YOUR API KEY')
 
 
 def main():
     pageNumber = 10
-    print (" ---> Requesting photos...")
     count = 0
     update = False
     retrievePic = 0;
@@ -23,9 +23,7 @@ def main():
             for photo in photos.entries:
                 count += 1
                 filename = photo.id + '.jpeg'
-                print (photo.link_download_location)
                 linkSourceImg = requests.get(photo.link_download_location + '/?client_id=UVtouHS8slGsncRIUtSKsI5BZdiI2dzCQ0hav80KQ4Y')
-                print (linkSourceImg)
                 data = linkSourceImg.json()
                 url = data['url']
                 path = '/home/pi/Desktop/photoframe/unsplash-pictures/%s' % filename
@@ -43,7 +41,6 @@ def main():
 
     #if it added or removed a photo, update slideshow
     if update == True:
-        print (" ---> Restarting slideshow")
         os.system("kill $(ps aux | grep '[f]eh' | awk '{print $2}')")
         os.system("/home/pi/bin/script_slideshow")
 
