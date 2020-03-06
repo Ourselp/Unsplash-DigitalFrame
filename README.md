@@ -71,5 +71,5 @@ unsplash-DigitalFrame is released under the [MIT License](<http://www.opensource
 
 
 <p align="center">
- If you like this project and you are a curious recruiter, come checkout [my portfolio](<https://philippeoursel.com/home>)
+ If you like this project and you are a curious recruiter, come checkout [my portfolio](<https://www.philippeoursel.com/home>)
 </p>
