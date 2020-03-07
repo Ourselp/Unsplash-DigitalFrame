@@ -1,4 +1,4 @@
-# unsplash-DigitalFrame
+# Unsplash-DigitalFrame
 A little project I made who use the unsplash API to retrieve picture of an account and save them locally on a raspberry PI for a custom digital-frame. 
 
 First, save the main script "download_user_unsplash_photos.py" on your desktop and change the line 18 to your account :
